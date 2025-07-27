@@ -1,0 +1,9 @@
+# Snap packages (if enabled)
+sudo snap install package_name
+sudo snap list
+sudo snap remove package_name
+
+# Flatpak (if configured)
+flatpak install package_name
+flatpak list
+flatpak uninstall package_name
