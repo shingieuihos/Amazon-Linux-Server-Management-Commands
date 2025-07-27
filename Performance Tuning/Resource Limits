@@ -1,0 +1,7 @@
+# View limits
+ulimit -a
+cat /etc/security/limits.conf
+
+# Set limits
+ulimit -n 4096  # Increase file descriptor limit
+echo "* soft nofile 4096" | sudo tee -a /etc/security/limits.conf
