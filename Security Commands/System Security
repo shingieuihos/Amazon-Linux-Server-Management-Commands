@@ -1,0 +1,15 @@
+# SELinux status and management
+getenforce
+sudo setenforce 0  # Permissive mode
+sudo setenforce 1  # Enforcing mode
+sestatus
+setsebool -P boolean_name on
+
+# Audit system
+sudo auditctl -l  # List audit rules
+sudo ausearch -m avc  # Search for SELinux denials
+sudo aureport  # Audit reports
+
+# Security updates
+sudo dnf update --security
+sudo dnf updateinfo list security
