@@ -1,0 +1,11 @@
+# File attributes
+lsattr filename
+sudo chattr +i filename  # Make immutable
+
+# Access control lists
+getfacl filename
+setfacl -m u:username:rw filename
+
+# File integrity
+sha256sum filename
+md5sum filename
