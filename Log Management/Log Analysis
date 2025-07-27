@@ -1,0 +1,8 @@
+# Search logs
+grep "error" /var/log/messages
+zgrep "pattern" /var/log/messages*.gz
+journalctl | grep "pattern"
+
+# Log statistics
+journalctl --disk-usage
+du -sh /var/log/*
