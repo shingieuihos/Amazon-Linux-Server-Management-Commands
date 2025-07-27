@@ -1,0 +1,6 @@
+# Edit sudoers file
+sudo visudo
+
+# Test sudo configuration
+sudo -l  # List allowed commands
+sudo -v  # Validate sudo timestamp
