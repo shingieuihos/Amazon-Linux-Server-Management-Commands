@@ -1,0 +1,14 @@
+# Memory information
+free -h
+cat /proc/meminfo
+
+# CPU information
+cat /proc/cpuinfo
+nproc
+
+# Disk usage
+df -h
+du -sh /path/to/directory
+
+# System limits
+ulimit -a
