@@ -1,0 +1,13 @@
+#!/bin/bash
+echo "=== System Health Check ==="
+echo "Date: $(date)"
+echo "Uptime: $(uptime)"
+echo "Load Average: $(cat /proc/loadavg)"
+echo "Memory Usage:"
+free -h
+echo "Disk Usage:"
+df -h
+echo "Top 5 CPU processes:"
+ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%cpu | head -6
+echo "Top 5 Memory processes:"
+ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head -6
