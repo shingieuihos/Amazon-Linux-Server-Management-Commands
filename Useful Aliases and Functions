@@ -1,0 +1,29 @@
+Add these to your ~/.bashrc for convenience:
+
+# System information aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias h='history'
+alias df='df -h'
+alias du='du -h'
+alias free='free -h'
+
+# Process management
+alias psg='ps aux | grep'
+alias topcpu='ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%cpu | head'
+alias topmem='ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head'
+
+# Network
+alias ports='ss -tuln'
+alias myip='curl -s ifconfig.me'
+
+# Service management
+alias sstart='sudo systemctl start'
+alias sstop='sudo systemctl stop'
+alias srestart='sudo systemctl restart'
+alias sstatus='systemctl status'
+
+# Log viewing
+alias logs='sudo journalctl -f'
+alias syslog='sudo tail -f /var/log/messages'
