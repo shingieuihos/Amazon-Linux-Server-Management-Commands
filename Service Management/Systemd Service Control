@@ -1,0 +1,30 @@
+# Start/stop/restart services
+sudo systemctl start service_name
+sudo systemctl stop service_name
+sudo systemctl restart service_name
+sudo systemctl reload service_name
+
+# Enable/disable services at boot
+sudo systemctl enable service_name
+sudo systemctl disable service_name
+
+# Check service status
+systemctl status service_name
+systemctl is-active service_name
+systemctl is-enabled service_name
+
+# List all services
+systemctl list-units --type=service
+systemctl list-units --type=service --state=running
+systemctl list-units --type=service --state=failed
+
+# View service logs
+journalctl -u service_name
+journalctl -u service_name -f  # Follow logs
+journalctl -u service_name --since "1 hour ago"
+
+# Reload systemd configuration
+sudo systemctl daemon-reload
+
+# Service dependencies
+systemctl list-dependencies service_name
