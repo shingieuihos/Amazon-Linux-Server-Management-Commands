@@ -59,3 +59,12 @@ Performance Tuning
 Security Commands
 
 AWS-Specific Commands
+
+
+## Contributing
+
+Feel free to contribute additional commands or improvements to this repository. Please ensure commands are tested on Amazon Linux 2023 before submitting.
+
+## License
+
+This repository is provided under the MIT License. See LICENSE file for details.
