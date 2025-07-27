@@ -1,0 +1,30 @@
+# View running processes
+ps aux
+ps -ef
+pstree
+
+# Interactive process viewer
+top
+htop  # Enhanced version (install with: sudo dnf install htop)
+
+# Find processes
+pgrep process_name
+pidof process_name
+ps aux | grep process_name
+
+# Kill processes
+kill PID
+kill -9 PID  # Force kill
+killall process_name
+pkill process_name
+
+# Process priorities
+nice -n 10 command  # Start with lower priority
+renice -n 5 -p PID  # Change priority of running process
+
+# Background and foreground jobs
+command &  # Run in background
+jobs  # List background jobs
+fg %1  # Bring job to foreground
+bg %1  # Send job to background
+nohup command &  # Run command immune to hangups
