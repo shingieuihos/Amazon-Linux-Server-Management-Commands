@@ -1,0 +1,22 @@
+# System resource usage
+top
+htop
+iotop  # I/O usage (sudo dnf install iotop)
+iftop  # Network usage (sudo dnf install iftop)
+
+# Memory usage
+free -h
+watch -n 1 free -h
+
+# Disk I/O
+iostat -x 1  # From sysstat package
+sar -d 1  # From sysstat package
+
+# Network monitoring
+ss -tuln  # Socket statistics
+netstat -tuln  # Network connections
+nload  # Network load (sudo dnf install nload)
+
+# System calls and library calls
+strace -p PID
+ltrace -p PID
