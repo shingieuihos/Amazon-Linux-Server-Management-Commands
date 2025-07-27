@@ -1,0 +1,18 @@
+# Firewalld (default firewall)
+sudo systemctl status firewalld
+sudo firewall-cmd --state
+sudo firewall-cmd --get-default-zone
+sudo firewall-cmd --list-all
+
+# Open/close ports
+sudo firewall-cmd --add-port=80/tcp --permanent
+sudo firewall-cmd --remove-port=80/tcp --permanent
+sudo firewall-cmd --reload
+
+# Service management
+sudo firewall-cmd --add-service=ssh --permanent
+sudo firewall-cmd --remove-service=ssh --permanent
+
+# Zone management
+sudo firewall-cmd --get-zones
+sudo firewall-cmd --set-default-zone=public
