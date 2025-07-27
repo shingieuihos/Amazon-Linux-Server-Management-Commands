@@ -1,0 +1,12 @@
+# Kernel parameters
+sysctl -a  # View all parameters
+sudo sysctl vm.swappiness=10  # Temporary change
+echo 'vm.swappiness=10' | sudo tee -a /etc/sysctl.conf  # Permanent
+
+# CPU governor
+cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+echo performance | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+
+# I/O scheduler
+cat /sys/block/sda/queue/scheduler
+echo mq-deadline | sudo tee /sys/block/sda/queue/scheduler
