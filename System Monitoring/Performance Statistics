@@ -1,0 +1,19 @@
+# Install sysstat for advanced monitoring
+sudo dnf install sysstat
+sudo systemctl enable --now sysstat
+
+# System activity reporter
+sar -u 1 5  # CPU usage
+sar -r 1 5  # Memory usage
+sar -d 1 5  # Disk activity
+sar -n DEV 1 5  # Network activity
+
+# Virtual memory statistics
+vmstat 1 5
+
+# I/O statistics
+iostat -x 1 5
+
+# Performance counters
+perf top
+perf stat command
