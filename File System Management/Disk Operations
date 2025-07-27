@@ -1,0 +1,25 @@
+# Disk usage and information
+df -h
+du -sh /path/*
+lsblk
+fdisk -l
+
+# Mount/unmount filesystems
+sudo mount /dev/sdb1 /mnt/data
+sudo umount /mnt/data
+mount | grep ext4  # Show mounted filesystems
+
+# File system checks
+sudo fsck /dev/sdb1
+sudo fsck.ext4 /dev/sdb1
+
+# Create filesystems
+sudo mkfs.ext4 /dev/sdb1
+sudo mkfs.xfs /dev/sdb1
+
+# LVM management
+sudo pvcreate /dev/sdb1
+sudo vgcreate volume_group /dev/sdb1
+sudo lvcreate -L 10G -n logical_volume volume_group
+sudo lvextend -L +5G /dev/volume_group/logical_volume
+sudo resize2fs /dev/volume_group/logical_volume
