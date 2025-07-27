@@ -1,0 +1,7 @@
+# Install CloudWatch agent
+sudo dnf install amazon-cloudwatch-agent
+
+# Configure and start
+sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-config-wizard
+sudo systemctl start amazon-cloudwatch-agent
+sudo systemctl enable amazon-cloudwatch-agent
