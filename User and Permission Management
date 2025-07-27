@@ -1,0 +1,21 @@
+# User operations
+sudo useradd username
+sudo usermod -aG group username
+sudo userdel username
+sudo passwd username
+
+# User information
+id username
+groups username
+whoami
+who
+w
+last
+
+# Switch users
+su - username
+sudo -u username command
+
+# User configuration
+sudo chage -l username  # Password aging info
+sudo chage -M 90 username  # Set password expiry
