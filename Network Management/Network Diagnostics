@@ -1,0 +1,18 @@
+# Connectivity tests
+ping -c 4 google.com
+traceroute google.com
+mtr google.com  # Combined ping and traceroute
+
+# Port scanning and testing
+nmap -sS target_ip  # SYN scan
+nc -zv hostname port  # Test port connectivity
+telnet hostname port
+
+# Bandwidth testing
+iperf3 -s  # Server mode
+iperf3 -c server_ip  # Client mode
+
+# Network statistics
+ss -s  # Summary statistics
+ss -tuln  # Listening ports
+netstat -i  # Interface statistics
