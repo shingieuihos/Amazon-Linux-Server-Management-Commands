@@ -1,0 +1,30 @@
+# Update package database
+sudo dnf update
+
+# Install packages
+sudo dnf install package_name
+sudo dnf install -y package_name  # Auto-confirm
+
+# Search for packages
+dnf search keyword
+dnf list available | grep package_name
+
+# Remove packages
+sudo dnf remove package_name
+sudo dnf autoremove  # Remove orphaned dependencies
+
+# Package information
+dnf info package_name
+dnf list installed
+dnf history
+
+# Clean package cache
+sudo dnf clean all
+
+# Enable/disable repositories
+sudo dnf config-manager --enable repository_name
+sudo dnf config-manager --disable repository_name
+
+# Group packages
+dnf group list
+sudo dnf group install "Development Tools"
