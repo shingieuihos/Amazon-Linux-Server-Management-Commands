@@ -1,0 +1,22 @@
+# Find files and directories
+find /path -name "*.txt"
+find /path -type f -size +100M
+find /path -mtime -7  # Modified in last 7 days
+locate filename  # Fast file location (requires updatedb)
+
+# File permissions and ownership
+chmod 755 file_or_directory
+chmod +x script.sh
+chown user:group file_or_directory
+chgrp group file_or_directory
+
+# Archive and compression
+tar -czf archive.tar.gz /path/to/directory
+tar -xzf archive.tar.gz
+zip -r archive.zip /path/to/directory
+unzip archive.zip
+
+# File monitoring
+tail -f /var/log/messages
+watch -n 1 ls -la /path
+inotifywait -m /path/to/watch  # Requires inotify-tools
