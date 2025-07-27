@@ -1,0 +1,20 @@
+# Display system information
+uname -a
+hostnamectl
+cat /etc/os-release
+
+# Show system uptime and load
+uptime
+
+# Display kernel version
+uname -r
+
+# Show hardware information
+lscpu
+lsmem
+lsblk
+lspci
+lsusb
+
+# Check system architecture
+arch
